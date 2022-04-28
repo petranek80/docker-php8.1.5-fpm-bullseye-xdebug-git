@@ -25,6 +25,7 @@ or manual download ZIP package and extract all files to project folder /docker/p
       - "./etc/php/php.ini:/usr/local/etc/php/conf.d/custom.php.ini"
 ```
       
+or replace old Dockerfile PHP 7 version and execute ```docker-compose build php```
 
 ### 2. create PHP config file in project folder
 
