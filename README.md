@@ -1,10 +1,6 @@
 # docker-php8.1.5-fpm-xdebug-git
 
-based on https://github.com/docker-library/php
-
-added git support
-
-Dockerfile for PHP 8.1.5 fpm
+Dockerfile for PHP 8.1.5 FPM based on https://github.com/docker-library/php
 
 * with PDO (MySQL client)
 * with xdebug (client_host=127.0.0.1, client_port=9003, idekey="PHPSTORM")
@@ -32,7 +28,7 @@ https://hub.docker.com/repository/docker/petranek80/php8.1.5-fpm-xdebug-git
 [pdo_mysql]
 pdo_mysql.default_socket=/var/run/mysqld/mysqld.sock
 ```
-### 3. configure PHP in nginx server [OPTIONAL]
+### 3. [OPTIONAL] configure docker nginx server for running with this dockerized PHP
 
 add to nginx config file (etc. default.template.conf)
 
