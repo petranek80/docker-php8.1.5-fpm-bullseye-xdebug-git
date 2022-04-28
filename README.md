@@ -1,16 +1,16 @@
 # docker-php8.1.5-fpm-xdebug-git
 
-Dockerfile for PHP 8.1.5 FPM based on https://github.com/docker-library/php
+PHP 8.1.5 FPM Dockerfile based on https://github.com/docker-library/php for Laminas (Zend Framework 3) projects
 
-* with PDO (MySQL client)
-* with xdebug (client_host=127.0.0.1, client_port=9003, idekey="PHPSTORM")
-* with git (clone in composer.phar)
+* MySQL (PDO)
+* xdebug (client_host=127.0.0.1, client_port=9003, idekey="PHPSTORM")
+* git (for use clone in composer.phar from GitLab repositories)
 
-## docker hub link
+Docker registry link: https://hub.docker.com/repository/docker/petranek80/php8.1.5-fpm-xdebug-git
 
-https://hub.docker.com/repository/docker/petranek80/php8.1.5-fpm-xdebug-git
+# Example usage with docker-compose
 
-### 1. add PHP docker image to docker-compose.yml file
+### 1. configure this PHP docker image in docker-compose.yml file in your Laminas project folder
 
 ```
   php:
@@ -28,7 +28,7 @@ https://hub.docker.com/repository/docker/petranek80/php8.1.5-fpm-xdebug-git
 [pdo_mysql]
 pdo_mysql.default_socket=/var/run/mysqld/mysqld.sock
 ```
-### 3. [OPTIONAL] configure docker nginx server for running with this dockerized PHP
+### 3. configure docker nginx server (image: nginx) for running with this dockerized PHP
 
 add to nginx config file (etc. default.template.conf)
 
