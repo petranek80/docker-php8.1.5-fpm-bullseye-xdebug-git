@@ -6,7 +6,12 @@ PHP 8.1.5 FPM Dockerfile based on https://github.com/docker-library/php for Lami
 * xdebug (client_host=127.0.0.1, client_port=9003, idekey="PHPSTORM")
 * git (for use clone in composer.phar from GitLab repositories)
 
-Docker registry link: https://hub.docker.com/repository/docker/petranek80/php8.1.5-fpm-xdebug-git
+## Usage
+Docker registry link: https://hub.docker.com/repository/docker/petranek80/php8.1.5-fpm-xdebug-git DEPRECATED, IT IS PREMIUM SERVICE NOW :-(
+
+
+or manual download ZIP package and extract all files to project folder /docker/php/8.1.5-fpm/ (create first)
+
 
 # Example usage with docker-compose
 
