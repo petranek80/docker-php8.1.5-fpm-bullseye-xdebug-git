@@ -15,14 +15,16 @@ or manual download ZIP package and extract all files to project folder /docker/p
 
 # Example usage with docker-compose
 
-### 1. configure this PHP docker image in docker-compose.yml file in your Laminas project folder
+### 1. configure service in docker-compose.yml file in your Laminas project folder
 
 ```
-  php:
-    image: petranek80/php8.1.5-fpm-xdebug-git
-    volumes:
-      - ".:/var/www/html"
-      - "./etc/php/php.ini:/usr/local/etc/php/conf.d/custom.php.ini"
+    php:
+        build:
+            context: ./docker/php/8.1.5-fpm
+            dockerfile: Dockerfile
+        volumes:
+            - ".:/var/www/html"
+            - "./docker/etc/php/php.ini:/usr/local/etc/php/conf.d/custom.php.ini"
 ```
       
 or replace old Dockerfile PHP 7 version and execute ```docker-compose build php```
